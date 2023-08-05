@@ -19,5 +19,15 @@ public static class Messages
     public static string FoundColor = "The color has been retrieved!.";
     public static string ColorAdded = "The color has been added!";
     public static string ColorUpdated = "The color has been updated!";
-    public static string ColorDeleted = "The color has been deleted!"; 
+    public static string ColorDeleted = "The color has been deleted!";
+    public static string UserAdded = "The user has been added!";
+    public static string ListedAllUsers = "The list of all users has been retrieved!";
+    public static string RetrievedUser = "The user has been retrieved!";
+    public static string UserUpdated = "The user has been updated!";
+    public static string UserDeleted = "The user has been deleted!";
+    public static string ListedAllCustomers = "The list of all customers has been retrieved!";
+    public static string RetrievedCustomer = "The customer has been retrieved!";
+    public static string CustomerAdded = "The customer has been added!";
+    public static string CustomerUpdated = "The customer has been updated!";
+    public static string CustomerDeleted = "The customer has been deleted!";
 }

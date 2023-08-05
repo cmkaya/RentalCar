@@ -1,3 +1,5 @@
+using Entity.Concrete;
+
 namespace RentalCar.Business.Constants;
 
 public static class Messages
@@ -13,4 +15,9 @@ public static class Messages
     public static string BrandUpdated = "The brand has been updated!";
     public static string BrandDeleted = "The brand has been deleted!";
     public static string FindedBrand = "The car has been retrieved!";
+    public static string ListedAllColors = "The list of all colors has been retrieved!";
+    public static string FoundColor = "The color has been retrieved!.";
+    public static string ColorAdded = "The color has been added!";
+    public static string ColorUpdated = "The color has been updated!";
+    public static string ColorDeleted = "The color has been deleted!"; 
 }

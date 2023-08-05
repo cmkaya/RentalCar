@@ -15,6 +15,7 @@ public class CarManager : ICarService
         _carDal = carDal;
     }
     
+    // Retrieve all cars
     public IDataResult<List<Car>> GetAllCars()
     {
         // Preventing users from accessing the list of cars
@@ -30,7 +31,7 @@ public class CarManager : ICarService
     public IDataResult<List<Car>> GetCarsByDailyPrice(decimal min, decimal max)
     {
         var carsToGet = _carDal.GetAllFromDatabase(c => c.DailyPrice > min && c.DailyPrice < max).ToList();
-        return new SuccessDataResult<List<Car>>(Messages.ListedCar, carsToGet);
+        return new SuccessDataResult<List<Car>>(Messages.ListedAllCar, carsToGet);
     }
 
     // Find a car based on `carId`
@@ -40,21 +41,25 @@ public class CarManager : ICarService
         return new SuccessDataResult<Car>(carToGet);
     }
 
-    // Add a car object to the database
+    // Add a car object
     public IResult Add(Car car)
     {
+        if (car.ModelName.Length < 2 && car.DailyPrice < 0)
+        {
+            return new ErrorResult(Messages.InvalidCarOperation);
+        }
         _carDal.AddToDatabase(car);
         return new SuccessResult(Messages.CarAdded);
     }
 
-    // Update a car object in the database
+    // Update a car object
     public IResult Update(Car car)
     {
         _carDal.UpdateInDatabase(car);
         return new SuccessResult(Messages.CarUpdated);
     }
 
-    // Delete a car object from the database
+    // Delete a car object
     public IResult Delete(Car car)
     {
         _carDal.DeleteFromDatabase(car);

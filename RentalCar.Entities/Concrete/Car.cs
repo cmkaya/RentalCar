@@ -15,4 +15,7 @@ public class Car : IEntity
     public string ModelYear { get; set; }
     [Precision(7, 2)]
     public decimal DailyPrice { get; set; }
+
+    public Color Color { get; set; }
+    public Brand Brand { get; set; }
 }

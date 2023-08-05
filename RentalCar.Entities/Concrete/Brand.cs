@@ -9,4 +9,6 @@ public class Brand : IEntity
     [Required]
     [MaxLength(15, ErrorMessage = "The brand should be up to 15 characters.")]
     public string Name { get; set; }
+
+    public ICollection<Car> Cars { get; set; }
 }

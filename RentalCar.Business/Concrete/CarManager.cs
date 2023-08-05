@@ -1,6 +1,7 @@
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entity.Concrete;
+using Entity.DTOs;
 using RentalCar.Business.Abstract;
 using RentalCar.Business.Constants;
 
@@ -32,6 +33,13 @@ public class CarManager : ICarService
     {
         var carsToGet = _carDal.GetAllFromDatabase(c => c.DailyPrice > min && c.DailyPrice < max).ToList();
         return new SuccessDataResult<List<Car>>(Messages.ListedAllCar, carsToGet);
+    }
+    
+    // Retrieve details of the car
+    public IDataResult<List<CarDetailsDto>> GetCarDetails()
+    {
+        var carToGet = _carDal.GetCarDetails();
+        return new SuccessDataResult<List<CarDetailsDto>>(carToGet);
     }
 
     // Find a car based on `carId`

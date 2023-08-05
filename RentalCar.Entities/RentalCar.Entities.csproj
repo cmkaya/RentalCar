@@ -3,8 +3,12 @@
     <PropertyGroup>
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
+        <Nullable>disable</Nullable>
         <RootNamespace>Entity</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RentalCar.Core\RentalCar.Core.csproj" />
+    </ItemGroup>
 
 </Project>

@@ -30,4 +30,9 @@ public static class Messages
     public static string CustomerAdded = "The customer has been added!";
     public static string CustomerUpdated = "The customer has been updated!";
     public static string CustomerDeleted = "The customer has been deleted!";
+    public static string ListedAllRentals = "The list of all rentals has been retrieved!";
+    public static string RetrievedRental = "The rental has been retrieved!";
+    public static string RentalAdded = "The rental has been added!";
+    public static string RentalUpdated = "The rental has been updated!";
+    public static string RentalDeleted = "The rental has been deleted!";
 }

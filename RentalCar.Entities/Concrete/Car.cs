@@ -18,4 +18,5 @@ public class Car : IEntity
 
     public Color Color { get; set; }
     public Brand Brand { get; set; }
+    public ICollection<Rental> Rentals { get; set; }
 }
